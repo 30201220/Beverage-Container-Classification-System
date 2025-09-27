@@ -8,7 +8,7 @@ import torch
 # 範例：將 yolov7 PyTorch weights 轉成 ONNX（需要在 yolov7 repo 中執行）
 # 請先把 weights 放到 yolov7/runs/train/exp/weights/best.pt
 
-pytorch_weights = 'yolov7/runs/train/exp/weights/best.pt'
+pytorch_weights = 'yolov7/runs/train/exp13/weights/best.pt'
 onnx_output = 'yolov7/best.onnx'
 
 print('以下為範例程式片段，請在含有 yolov7 repo 與正確環境中執行')
