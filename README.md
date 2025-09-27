@@ -40,15 +40,15 @@
 2. 開始訓練 YOLOv7 模型。  
 3. 測試模型效果，觀察 mAP 與分類正確率。  
 4. 將模型轉換為適合嵌入式部署的格式。  
-'''
-# 1) 匯出 ONNX
+```
+# 匯出 ONNX
 python pt_to_onnx.py --weights /path/to/best.pt --imgsz 640 640 --opset 12 --out model.onnx --yolov7
 
-# 2) ONNX → SavedModel → TFLite（可選量化）
+# ONNX → SavedModel → TFLite（可選量化）
 pip install tf2onnx tensorflow==2.10.0 onnx
 python onnx_to_tflite.py --onnx model.onnx --saved saved_model --tflite model.tflite --quant dynamic
 # quant 可選：none / dynamic / float16
-'''
+```
 
 ## 需求環境
 - Python 3.8+  
